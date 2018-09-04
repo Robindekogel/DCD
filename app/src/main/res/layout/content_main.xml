@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+
+        <TextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Robin de Kogel"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/calendarView"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Robin de Kogel" />
+
+        <TextView
+            android:id="@+id/idView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="ID: 2034124"
+            android:textSize="22dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toEndOf="@+id/nameView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="ID: 2034124" />
+
+        <CalendarView
+            android:id="@+id/calendarView3"
+            android:layout_width="333dp"
+            android:layout_height="300dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+        <LinearLayout
+            android:id="@+id/taskView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/calendarView3">
+
+            <TextView
+                android:id="@+id/taskOneView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Datum: klant x brengen"
+                android:textSize="22dp"
+                 />
+
+            <TextView
+                android:id="@+id/taskTwoView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Datum: Stand 1"
+                android:textSize="22dp"
+                />
+
+            <TextView
+                android:id="@+id/taskThreeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Datum: Henk bellen"
+                android:textSize="22dp"
+                />
+
+            <TextView
+                android:id="@+id/taskFourView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Datum: afspraak"
+                android:textSize="22dp"
+                />
+
+            <TextView
+                android:id="@+id/taskFiveView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Datum: Kevin koffie"
+                android:textSize="22dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="303dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Info: lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.lorem ipsum dolor sit amet, lorem ipsum dolor sit amet, lorem ipsum dolor sit amet,"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/taskView" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="317dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="buttonView_1"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="317dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="buttonView_2"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="22dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</ScrollView>
