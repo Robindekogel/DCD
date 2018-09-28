@@ -3,6 +3,7 @@ package com.example.android.dcd_v31;
 import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -90,6 +91,10 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_info:
                 Intent c= new Intent(MainActivity.this,MainActivity.class);
                 startActivity(c);
+                break;
+            case R.id.nav_search:
+                Intent v= new Intent(MainActivity.this,searchActivity.class);
+                startActivity(v);
                 break;
         }
 
