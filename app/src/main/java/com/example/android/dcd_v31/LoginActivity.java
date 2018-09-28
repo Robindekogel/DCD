@@ -1,5 +1,4 @@
 package com.example.android.dcd_v31;
-
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
