@@ -10,97 +10,448 @@
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        >
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp" />
-
+        app:layout_constraintGuide_begin="32dp"
+        />
     <android.support.constraint.Guideline
         android:id="@+id/guideline2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="32dp" />
-
+        app:layout_constraintGuide_end="32dp"
+        />
     <TextView
         android:id="@+id/nameView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="Robin de Kogel"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Robin de Kogel" />
-
+        tools:text="Robin de Kogel"
+        />
     <TextView
         android:id="@+id/idView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         android:text="ID: 2034124"
         android:textSize="22dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@+id/nameView"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="ID: 2034124" />
-
-
+        tools:text="ID: 2034124"
+        />
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/userNameView1"
+            style="@style/CustomerBoldTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="64dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/nameView" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="32dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            android:text="Account:"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
+            app:layout_constraintTop_toBottomOf="@+id/nameView"
+            />
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/userNameView2"
+            style="@style/CustomerTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:text="TextView"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
+            android:text="ikhebkoffie"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/userNameView1"
+            />
         <TextView
-            android:id="@+id/textView11"
+            android:id="@+id/firstNameView1"
+            style="@style/CustomerBoldTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="32dp"
-            android:text="TextView"
+            android:text="Voornaam:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/userNameView2"
+            />
+        <TextView
+            android:id="@+id/firstNameView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kevin"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/firstNameView1"
+            />
+        <TextView
+            android:id="@+id/insertionView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tussenvoegsel:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/firstNameView2"
+            />
+        <TextView
+            android:id="@+id/insertionView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="van der"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/insertionView1"
+            />
+        <TextView
+            style="@style/CustomerBoldTextAppearance"
+            android:id="@+id/lastNameView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achternaam:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/insertionView2"
+            />
+        <TextView
+            android:id="@+id/lastNameView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klis"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameView1"
+            />
+        <TextView
+            android:id="@+id/personalEmailView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E mail:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/lastNameView2"
+            />
+        <TextView
+            android:id="@+id/personalEmailView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:text="Kevin@decomputerdienst.nl"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmailView1"
+            />
+        <TextView
+            android:id="@+id/personalEmailView3"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Persoonlijke E mail:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmailView2"
+            />
+        <TextView
+            android:id="@+id/personalEmailView4"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="klis.kevin@gmail.com"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmailView3"
+            />
+        <TextView
+            android:id="@+id/personalPhoneView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefoon:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/personalEmailView4"
+            />
+        <TextView
+            android:id="@+id/personalPhoneView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="036 5364154"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalPhoneView1"
+            />
+        <TextView
+            android:id="@+id/personalMobileView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobiel:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalPhoneView2"
+            />
+        <TextView
+            android:id="@+id/personalMobileView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 2255113"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalMobileView1"
+            />
+        <TextView
+            android:id="@+id/personalMobileView3"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prive Mobiel:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalMobileView2"
+            />
+        <TextView
+            android:id="@+id/personalMobileView4"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 37313036"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalMobileView3"
+            />
+        <TextView
+            android:id="@+id/personalStreetView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Straat:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalMobileView4"
+            />
+        <TextView
+            android:id="@+id/personalStreetView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="J.S. Bachweg"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalStreetView1"
+            />
+        <TextView
+            android:id="@+id/personalStreetNumberView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huisnummer:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalStreetView2"
+            />
+        <TextView
+            android:id="@+id/personalStreetNumberView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="42"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalStreetNumberView1"
+            />
+        <TextView
+            android:id="@+id/personalZipcodeView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Postcode:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalStreetNumberView2"
+            />
+        <TextView
+            android:id="@+id/personalZipcodeView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1323ML"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalZipcodeView1"
+            />
+        <TextView
+            android:id="@+id/personalCityView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stad:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalZipcodeView2"
+            />
+        <TextView
+            android:id="@+id/personalCityView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalCityView1"
+            />
+        <TextView
+            android:id="@+id/personalProvinceView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provincie:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalCityView2"
+            />
+        <TextView
+            android:id="@+id/personalProvinceView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalProvinceView1"
+            />
+        <TextView
+            android:id="@+id/personalBirthdateView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geboortedatum:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalProvinceView2"
+            />
+        <TextView
+            android:id="@+id/personalBirthdateView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1993-09-01 00:00:00"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalBirthdateView1"
+            />
+        <View
+            android:id="@+id/personalView1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"
             app:layout_constraintEnd_toStartOf="@+id/guideline2"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-
+            app:layout_constraintTop_toBottomOf="@+id/personalBirthdateView2"
+            />
+        <TextView
+            android:id="@+id/personalTitleView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Noodgegevens:"
+            android:textSize="22dp"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/personalView1"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voornaam"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalTitleView1"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adri"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView1"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView3"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tussenvoegsel:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView2"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView4"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="van der"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView3"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView5"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achternaam:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView4"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView6"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Klis"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView5"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView7"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relatie:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView6"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView8"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vader"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView7"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView9"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefoon:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView8"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView10"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 20204023"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView9"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView11"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E mail:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView10"
+            />
+        <TextView
+            android:id="@+id/personalEmergencyView12"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="adri@ikweetvanniks.nl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/personalEmergencyView11" />
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
