@@ -83,8 +83,12 @@ public class personalActivity extends AppCompatActivity
                 break;
 
             case R.id.nav_info:
-                Intent c= new Intent(personalActivity.this,MainActivity.class);
+                Intent c= new Intent(personalActivity.this,personalActivity.class);
                 startActivity(c);
+                break;
+            case R.id.nav_search:
+                Intent v= new Intent(personalActivity.this,searchActivity.class);
+                startActivity(v);
                 break;
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
