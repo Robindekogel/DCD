@@ -2,7 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
@@ -15,6 +14,18 @@
             android:icon="@drawable/action_icon"
             android:title="Taken"
             />
+
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@drawable/action_icon"
+            android:title="Historie"
+            />
+
+        <item
+            android:id="@+id/nav_search"
+            android:icon="@drawable/search2_icon"
+            android:title="Zoeken"
+            />
     </group>
 
     <item android:title="Instellingen">
@@ -25,15 +36,20 @@
                 android:title="Persoonlijke gegevens"
                 />
             <item
+                android:id="@+id/nav_staff"
+                android:icon="@drawable/staff_icon"
+                android:title="Medewerkers"
+                />
+            <item
                 android:id="@+id/nav_log_out"
                 android:icon="@drawable/back_icon"
-                android:title="uitloggen" />
+                android:title="uitloggen"/>
             <item
                 android:id="@+id/nav_info"
                 android:icon="@drawable/info_icon"
                 android:title="Info" />
 
+
         </menu>
     </item>
-
 </menu>

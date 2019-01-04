@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        style="@style/CustomerTextAppearanceExtra"
+        android:textColor="#448AFF"
+        android:text="Persoonlijke gegevens"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        style="@style/CustomerTextAppearanceExtra"
+        android:elevation="3dp"
+        android:layout_marginStart="16dp"
+        android:paddingBottom="25dp"
+        android:textColor="#448AFF"
+        android:text="Naam:"
+        />
+    <TextView
+        android:id="@+id/main_firstname_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:elevation="3dp"
+        android:layout_marginTop="-25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="firstname"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="E mail:"
+        />
+    <TextView
+        android:id="@+id/main_email_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="email"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Telefoon:"
+        />
+    <TextView
+        android:id="@+id/main_phonenumber_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="Phonenumber"
+        />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Mobiel:"
+        />
+
+
+    <TextView
+        android:id="@+id/main_mobile_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="mobile"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Mobiel Privé:"
+        />
+    <TextView
+        android:id="@+id/main_mobile_private_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="mobile private"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Straat:"
+        />
+    <TextView
+        android:id="@+id/main_street_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="street "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Huisnummer:"
+        />
+    <TextView
+        android:id="@+id/main_streetnumber_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="street number"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Postcode:"
+        />
+    <TextView
+        android:id="@+id/main_zipcode_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="Zipcode"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Stad:"
+        />
+    <TextView
+        android:id="@+id/main_city_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="city "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Provincie:"
+        />
+    <TextView
+        android:id="@+id/main_province_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="province "
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Geboortedatum:"
+        />
+    <TextView
+        android:id="@+id/main_birthday_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="birthday"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="25dp"
+        android:background="#eee"
+        android:elevation="0dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="#448AFF"
+        android:textAlignment="center"
+        android:text="Noodgegevens"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Naam:"
+        />
+
+    <TextView
+        android:id="@+id/main_emergency_firstname_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="firstname emergency"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Relatie:"
+        />
+
+    <TextView
+        android:id="@+id/main_emergency_relation_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="relation emergency"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="Telefoon:"
+        />
+
+    <TextView
+        android:id="@+id/main_emergency_phonenumber_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="phonenumber emergency"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/CustomerTextAppearanceExtra"
+        android:layout_marginStart="16dp"
+        android:textColor="#448AFF"
+        android:text="email:"
+        />
+
+    <TextView
+        android:id="@+id/main_emergency_email_Detail"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="6dp"
+        android:text="email emergency"
+        />
+
+</LinearLayout>

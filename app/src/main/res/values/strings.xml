@@ -1,6 +1,5 @@
 <resources>
-
-    <string name="app_name">DCD-v3.1</string>
+    <string name="app_name">De Computerdienst</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -18,9 +17,14 @@
     <string name="error_incorrect_password">This password is incorrect</string>
     <string name="error_field_required">This field is required</string>
     <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
-    <string name="title_activity_result_">Result_Activity</string>
-    <string name="title_activity_result">ResultActivity</string>
     <string name="title_activity_personal">Persoonlijke gegevens</string>
     <string name="title_activity_task">Taken</string>
-
+    <string name="title_activity_search">Zoeken</string>
+    <string name="title_activity_result">Medewerkers DCD</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_history">Historie</string>
+    <string name="title_activity_staff">Medewerkers</string>
+    <string name="title_activity_customers">Klanten</string>
+    <string name="title_activity_test">Klanten</string>
+    <string name="title_activity_customer_detail">CustomerDetailActivity</string>
 </resources>

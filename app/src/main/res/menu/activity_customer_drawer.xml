@@ -9,11 +9,13 @@
             android:icon="@drawable/home_icon"
             android:title="Home"
             />
+
         <item
             android:id="@+id/nav_action"
             android:icon="@drawable/action_icon"
             android:title="Taken"
             />
+
         <item
             android:id="@+id/nav_history"
             android:icon="@drawable/action_icon"
@@ -39,12 +41,16 @@
                 android:icon="@drawable/staff_icon"
                 android:title="Medewerkers"
                 />
-
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/back_icon"
+                android:title="uitloggen"/>
             <item
                 android:id="@+id/nav_info"
                 android:icon="@drawable/info_icon"
                 android:title="Info" />
+
         </menu>
     </item>
-
 </menu>
+

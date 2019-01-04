@@ -39,7 +39,6 @@
                 android:icon="@drawable/staff_icon"
                 android:title="Medewerkers"
                 />
-
             <item
                 android:id="@+id/nav_info"
                 android:icon="@drawable/info_icon"

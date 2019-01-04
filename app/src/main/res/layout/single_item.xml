@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    >
+
+    <TextView
+        android:id="@+id/main_firstname"
+        style="@style/CustomerTextAppearanceExtra"
+        android:textColor="#448AFF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:text="firstname2"
+        />
+    <TextView
+        android:id="@+id/main_insertion"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:text="insertion"
+        />
+
+    <TextView
+        android:id="@+id/main_lastname"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:text="lastname"
+        />
+
+    <TextView
+        android:id="@+id/main_email"
+        style="@style/CustomerTextAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:text="email"
+    />
+
+</LinearLayout>
