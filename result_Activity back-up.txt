@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".resultActivity"
+    tools:showIn="@layout/app_bar_result">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="32dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="32dp" />
+
+        <Button
+            android:id="@+id/gmapsButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="Routebeschrijving"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/streetView2"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/streetView1"
+            app:layout_constraintTop_toBottomOf="@+id/birthDateView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/dailButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="Bellen"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneView"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/telefoonView"
+            app:layout_constraintTop_toBottomOf="@+id/emailView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/mailButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="E-mail"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailView"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.973"
+            app:layout_constraintStart_toEndOf="@+id/customerMailView"
+            app:layout_constraintTop_toBottomOf="@+id/lastnameView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <TextView
+            android:id="@+id/customerTotalView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="64dp"
+            android:text="Klant:"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/aanhefView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aanhef:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerTotalView" />
+
+        <TextView
+            android:id="@+id/preambleView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dhr"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/aanhefView" />
+
+        <TextView
+            android:id="@+id/voornaamView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voornaam:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/preambleView" />
+
+        <TextView
+            android:id="@+id/firstnameView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Koffie"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/voornaamView" />
+
+        <TextView
+            android:id="@+id/tussenvoegselView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tussenvoegsel:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/firstnameView" />
+
+        <TextView
+            android:id="@+id/insertionView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="van der"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/tussenvoegselView" />
+
+        <TextView
+            android:id="@+id/achternaamView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Achternaam:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/insertionView" />
+
+        <TextView
+            android:id="@+id/lastnameView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Klis"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/achternaamView" />
+
+        <TextView
+            android:id="@+id/customerMailView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/lastnameView" />
+
+        <TextView
+            android:id="@+id/emailView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kevin@decomputerdienst.nl"
+            android:clickable="true"
+            android:onClick="click"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerMailView" />
+
+        <TextView
+            android:id="@+id/telefoonView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefoon:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/emailView" />
+
+        <TextView
+            android:id="@+id/phoneView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="036 5364154"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/telefoonView" />
+
+        <TextView
+            android:id="@+id/mobileView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobiel:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/phoneView" />
+
+        <TextView
+            android:id="@+id/mobilePhoneView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 37313036"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/mobileView" />
+
+        <TextView
+            android:id="@+id/geboorteView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geboortedatum:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/mobilePhoneView" />
+
+        <TextView
+            android:id="@+id/birthDateView"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15-04-1990"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/geboorteView" />
+
+        <TextView
+            android:id="@+id/streetView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Straat:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/birthDateView" />
+
+        <TextView
+            android:id="@+id/streetView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Poeziestraat"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/streetView1" />
+
+        <TextView
+            android:id="@+id/streetNumberView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Huisnummer:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/streetView2" />
+
+        <TextView
+            android:id="@+id/streetNumberView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/streetNumberView1" />
+
+        <TextView
+            android:id="@+id/zipcodeView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Postcode:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/streetNumberView2" />
+
+        <TextView
+            android:id="@+id/zipcodeView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1321 HG"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/zipcodeView1" />
+
+        <TextView
+            android:id="@+id/cityView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stad:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/zipcodeView2" />
+
+        <TextView
+            android:id="@+id/cityView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Almere"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/cityView1" />
+
+        <TextView
+            android:id="@+id/provinceView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Provincie:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/cityView2" />
+
+        <TextView
+            android:id="@+id/provinceView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flevoland"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/provinceView1" />
+
+        <TextView
+            android:id="@+id/customerExtraView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/provinceView2" />
+
+        <TextView
+            android:id="@+id/customerExtraView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mooie kuif!"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerExtraView1" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerExtraView2" />
+
+        <TextView
+            android:id="@+id/customerTitleView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Bankgegevens"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/ibanView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rekeningnummer:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerTitleView2" />
+
+        <TextView
+            android:id="@+id/ibanView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NLINGB 001 4564654654"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/ibanView1" />
+
+        <TextView
+            android:id="@+id/acountNumberView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account nummer:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/ibanView2" />
+
+        <TextView
+            android:id="@+id/acountNumberView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4564654654"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/acountNumberView1" />
+
+        <TextView
+            android:id="@+id/acountNameView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account houder:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/acountNumberView2" />
+
+        <TextView
+            android:id="@+id/acountNameView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="K S VD KLIS"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/acountNameView1" />
+
+        <TextView
+            android:id="@+id/paymentTermView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betalingstermijn:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/acountNameView2" />
+
+        <TextView
+            android:id="@+id/paymentTermView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 weken"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/paymentTermView1" />
+
+        <TextView
+            android:id="@+id/paymentExtraView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/paymentTermView2" />
+
+        <TextView
+            android:id="@+id/paymentExtraView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Betaald nooit optijd"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/paymentExtraView1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/paymentExtraView2" />
+
+        <TextView
+            android:id="@+id/customerTitleView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Bedrijf"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+        <TextView
+            android:id="@+id/businessNameView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bedrijf:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/customerTitleView3" />
+
+        <TextView
+            android:id="@+id/businessNameView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="De Computerdienst"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessNameView1" />
+
+        <TextView
+            android:id="@+id/businessMailView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-mail:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessNameView2" />
+
+        <TextView
+            android:id="@+id/businessMailView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="info@decomputerdienst.nl"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessMailView1" />
+
+        <TextView
+            android:id="@+id/businessPhoneView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Telefoon:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessMailView2" />
+
+        <TextView
+            android:id="@+id/businessPhoneView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06 37313036"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessPhoneView1" />
+
+        <TextView
+            android:id="@+id/businesskvkView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KVK:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessPhoneView2" />
+
+        <TextView
+            android:id="@+id/businesskvkView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="658268516895646"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businesskvkView1" />
+
+        <TextView
+            android:id="@+id/businessBTWView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BTW:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businesskvkView2" />
+
+        <TextView
+            android:id="@+id/businessBTWView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="21%"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessBTWView1" />
+
+        <TextView
+            android:id="@+id/businessSiteView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Website:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessBTWView2" />
+
+        <TextView
+            android:id="@+id/businessSiteView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wwww.decomputerdienst.nl"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessSiteView1" />
+
+        <TextView
+            android:id="@+id/businessSectorView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sector:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessSiteView2" />
+
+        <TextView
+            android:id="@+id/businessSectorView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" IT "
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessSectorView1" />
+
+        <TextView
+            android:id="@+id/businessExtraView1"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extra:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessSectorView2" />
+
+        <TextView
+            android:id="@+id/businessExtraView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Awsome bedrijf!"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessExtraView1" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCCCCC"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/businessExtraView2" />
+
+        <TextView
+            android:id="@+id/historyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Historie"
+            android:textSize="22dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/historyTitleView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titel:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyView" />
+
+        <TextView
+            android:id="@+id/historyTitleView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Hoi dit is een actie"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyTitleView" />
+
+        <TextView
+            android:id="@+id/historyContentView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Content:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyTitleView2"
+            />
+
+        <TextView
+            android:id="@+id/historyContentView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dit is de content"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyContentView"
+            />
+
+        <TextView
+            android:id="@+id/historyStartTimeView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Begintijd:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyContentView2"
+            />
+
+        <TextView
+            android:id="@+id/historyStartTimeView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-12-12 13:05:10"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyStartTimeView"
+            />
+
+        <TextView
+            android:id="@+id/historyEndTimeView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EindTijd:"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyStartTimeView2"
+            />
+
+        <TextView
+            android:id="@+id/historyEndTimeView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-12-12 13:40:10"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyEndTimeView"
+            />
+
+        <TextView
+            android:id="@+id/historyDurationView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duur:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyEndTimeView2"
+            />
+
+        <TextView
+            android:id="@+id/historyDurationView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="null"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyDurationView"
+            />
+
+        <TextView
+            android:id="@+id/historyCreateDateView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aangemaakt op:"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyDurationView2"
+            />
+
+        <TextView
+            android:id="@+id/historyCreateDateView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2017-12-07 11:16:14"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyCreateDateView"
+            />
+
+        <TextView
+            android:id="@+id/historyUpdateDateView"
+            style="@style/CustomerBoldTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laatste Update"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyCreateDateView2"
+            />
+
+        <TextView
+            android:id="@+id/historyUpdateDateView2"
+            style="@style/CustomerTextAppearance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:text="2017-12-07 11:17:14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/historyUpdateDateView" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
+
+
+
+<Button
+            android:id="@+id/mailButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="E-mail"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/emailView"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.973"
+            app:layout_constraintStart_toEndOf="@+id/customerMailView"
+            app:layout_constraintTop_toBottomOf="@+id/lastnameView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+
+                    /*** onClickListener sendMail*/
+        button=(Button)findViewById(R.id.mailButtonView);
+        button.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                Uri data = Uri.parse("mailto:kevin@decomputerdienst.nl?subject=TEST");
+                intent.setData(data);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+        <Button
+            android:id="@+id/dailButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#448AFF"
+            android:text="Bellen"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toTopOf="@+id/phoneView"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/telefoonView"
+            app:layout_constraintTop_toBottomOf="@+id/emailView"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+
+                /*** onClickListener Dail on Phone*/
+        Button Phone = (Button) findViewById(R.id.dailButtonView);
+        Phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0637313036" +
+                        ""));
+                startActivity(intent);
+            }
+        });
