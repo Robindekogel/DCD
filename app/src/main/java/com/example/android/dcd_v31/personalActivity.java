@@ -1,29 +1,29 @@
 package com.example.android.dcd_v31;
 
-import android.app.Activity;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.view.MenuItemCompat;
-import android.support.v7.widget.SearchView;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import com.example.android.dcd_v31.Staff.StaffActivity;
+import com.example.android.dcd_v31.fetchData.fetchDataPersonal;
+
 public class personalActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    public static TextView personalData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal);
+        personalData = (TextView)findViewById(R.id.personalDataTextView);
+        fetchDataPersonal process = new fetchDataPersonal();
+        process.execute();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -45,15 +45,15 @@ public class personalActivity extends AppCompatActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
-        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setSubmitButtonEnabled(true);
-        return true;
-    }
+//   @Override
+//   public boolean onCreateOptionsMenu(Menu menu) {
+//       getMenuInflater().inflate(R.menu.main, menu);
+//       final SearchView searchView = (SearchView) MenuItemCompat.getActionView(menu.findItem(R.id.action_search));
+//       SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//       searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+//       searchView.setSubmitButtonEnabled(true);
+//       return true;
+//   }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -66,29 +66,32 @@ public class personalActivity extends AppCompatActivity
         int id=item.getItemId();
         switch (id){
             case R.id.nav_home:
-                Intent z= new Intent(personalActivity.this,MainActivity.class);
-                startActivity(z);
+                Intent a1= new Intent(personalActivity.this,MainActivity.class);
+                startActivity(a1);
                 break;
             case R.id.nav_personal:
-                Intent h= new Intent(personalActivity.this,personalActivity.class);
-                startActivity(h);
+                Intent a2= new Intent(personalActivity.this,personalActivity.class);
+                startActivity(a2);
+                break;
+            case R.id.nav_staff:
+                Intent a8= new Intent(personalActivity.this,StaffActivity.class);
+                startActivity(a8);
                 break;
             case R.id.nav_action:
-                Intent x= new Intent(personalActivity.this,taskActivity.class);
-                startActivity(x);
+                Intent a3= new Intent(personalActivity.this,taskActivity.class);
+                startActivity(a3);
                 break;
-            case R.id.nav_log_out:
-                Intent i= new Intent(personalActivity.this,LoginActivity.class);
-                startActivity(i);
-                break;
-
             case R.id.nav_info:
-                Intent c= new Intent(personalActivity.this,personalActivity.class);
-                startActivity(c);
+                Intent a5= new Intent(personalActivity.this,personalActivity.class);
+                startActivity(a5);
                 break;
             case R.id.nav_search:
-                Intent v= new Intent(personalActivity.this,searchActivity.class);
-                startActivity(v);
+                Intent a6= new Intent(personalActivity.this,searchActivity.class);
+                startActivity(a6);
+                break;
+            case R.id.nav_history:
+                Intent a7= new Intent(personalActivity.this,HistoryActivity.class);
+                startActivity(a7);
                 break;
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
